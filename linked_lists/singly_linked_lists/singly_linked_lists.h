@@ -1,9 +1,10 @@
 
-#if
+#ifndef INT_LINKED_LIST
+#define INT_LINKED_LIST
 
 class IntSLLNode {
     public:
-        int info;
+        int data;
         //An auxiliary data member used to maintain the list
         IntSLLNode *next;
 
@@ -11,7 +12,7 @@ class IntSLLNode {
             next = 0;
         }
         IntSLLNode(int i, IntSLLNode *nxt = 0) {
-            info = i;
+            data = i;
             next = nxt;
         }
 };
@@ -36,3 +37,5 @@ class IntSLList {
         void deleteNode(int);
         bool isInList(int) const;
 }
+
+#endif
