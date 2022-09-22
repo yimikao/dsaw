@@ -50,4 +50,12 @@ int IntSLList::deleteAtTail() {
     return dt;
 }
 
-void 
+void IntSLList::deleteNode(int v) {
+    if head == 0 {
+        return;
+    }
+    if (head == tail && v == head->info) {
+        delete head;
+        head = tail = 0;
+    } 
+}
