@@ -24,29 +24,38 @@ The number of nodes in the tree is in the range [0, 10^4]
 
 ```go
 /*
-Runtime: 7 ms, faster than 46.69% of Go online submissions for Maximum Depth of Binary Tree.
-Memory Usage: 4.3 MB, less than 62.44% of Go online submissions for Maximum Depth of Binary Tree.
+Runtime: 3 ms, faster than 89.50% of Go online submissions for Maximum Depth of Binary Tree.
+Memory Usage: 4.1 MB, less than 91.14% of Go online submissions for Maximum Depth of Binary Tree.
 */
 
 Think of it as finding depth of each subtree. Find Depth of what you see, call on children will be/trigger/handle recursion
 
 
+//total Depth
 func maxDepth(root *TreeNode) int {
     if root != nil {
-        //parent gives 1
-        rootDepth := 1
 
-        //get that of each children
+        //get depth of parent subTree
+        rootDepth := depthOfSubTree(root)
+        
+        //get that of each childrenSubTree 
         leftDepth := maxDepth(root.Left)
         rightDepth := maxDepth(root.Right)
         
         //round up/approximate values of children as it's same horizontal level 
         roundUp := MAX(leftDepth, rightDepth)
         
-        //return addition of both
+        //return addition of both 
         return rootDepth + roundUp
     }
-    //a nil subtree can't have a depth
+   //a nil subtree can't have a depth 
+    return 0
+}
+
+func depthOfSubTree(n *TreeNode) int {
+    if n != nil {
+        return 1
+    }
     return 0
 }
 
@@ -56,4 +65,5 @@ func MAX(a, b int) int {
     }
     return a
 }
+
 ```
