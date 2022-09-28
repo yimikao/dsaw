@@ -1,5 +1,6 @@
 ## Given the root of a binary tree, invert the tree, and return its root.
 
+Example1
 
 ![Example1](https://assets.leetcode.com/uploads/2021/03/14/invert1-tree.jpg)
 ```
