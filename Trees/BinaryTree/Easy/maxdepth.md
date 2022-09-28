@@ -24,9 +24,8 @@ The number of nodes in the tree is in the range [0, 10^4]
 
 ```go
 /*
-
-Runtime: 0 ms, faster than 100.00% of Go online submissions for Invert Binary Tree.
-Memory Usage: 2.1 MB, less than 71.25% of Go online submissions for Invert Binary Tree
+Runtime: 7 ms, faster than 46.69% of Go online submissions for Maximum Depth of Binary Tree.
+Memory Usage: 4.3 MB, less than 62.44% of Go online submissions for Maximum Depth of Binary Tree.
 */
 
 Think of it as finding depth of each subtree. Find Depth of what you see, call on children will be/trigger/handle recursion
