@@ -1,28 +1,37 @@
-## 
+## Diameter of Binary Tree
 
-dsdsdsdsdsdsdsd
+Given the root of a binary tree, return the length of the diameter of the tree.
+
+The diameter of a binary tree is the length of the longest path between any two nodes in a tree. This path may or may not pass through the root.
+
+The length of a path between two nodes is represented by the number of edges between them.
+
 
 Example1
 
-![Example1]()
+![Example1](https://assets.leetcode.com/uploads/2021/03/06/diamtree.jpg)
 ```
-
+Input: root = [1,2,3,4,5]
+Output: 3
+Explanation: 3 is the length of the path [4,2,1,3] or [5,2,1,3].
 ```
 
 Example2
 ```
-
+Input: root = [1,2]
+Output: 1
 ```
 
 Constraints:
 ```
-The 
-dsdsd
+The number of nodes in the tree is in the range [1, 10^4]
+-100 <= Node.val <= 100
 ```
 
 ```go
 /*
-
+Runtime: 19 ms, faster than 6.75% of Go online submissions for Diameter of Binary Tree.
+Memory Usage: 4.5 MB, less than 28.62% of Go online submissions for Diameter of Binary Tree.
 */
 
 
@@ -30,29 +39,29 @@ dsdsd
 func diameterOfBinaryTree(root *TreeNode) int {
     if root != nil {
         
-        lenLeft := pathFromRoot(root.Left)
-        lenRight := pathFromRoot(root.Right)
+        lenLeftSubTree := lengthChildSubTrees(root.Left)
+        lenRightSubTree := lengthChildSubTrees(root.Right)
         
-        diaRoot := lenLeft + lenRight
+        diaRootSubTree := lenLeftSubTree + lenRightSubTree
         
-        diaLeft := diameterOfBinaryTree(root.Left)
-        diaRight := diameterOfBinaryTree(root.Right)
+        diaLeftSubTree := diameterOfBinaryTree(root.Left)
+        diaRightSubTree := diameterOfBinaryTree(root.Right)
         
-        maxDiaChildren := MAX(diaLeft, diaRight)
+        maxDiaChildrenSubTrees := MAX(diaLeftSubTree, diaRightSubTree)
         
-        maxDiaSubtree := MAX(diaRoot, maxDiaChildren)
+        maxDiaBinTree := MAX(diaRootSubTree, maxDiaChildrenSubTrees)
         
-        return maxDiaSubtree
+        return maxDiaBinTree
         
     }
     return 0
 }
 
-func pathFromRoot(root *TreeNode) int {
+func lengthChildSubTrees(root *TreeNode) int {
     if root != nil {
         lenRoot := 1
-        lenLeft := pathFromRoot(root.Left)
-        lenRight := pathFromRoot(root.Right)
+        lenLeft := lengthChildSubTrees(root.Left)
+        lenRight := lengthChildSubTrees(root.Right)
         
         lenSubTree := lenRoot + MAX(lenLeft, lenRight)
         return lenSubTree
@@ -67,10 +76,6 @@ func MAX(a,b int) int {
     }
     return a
 }
-
-
-
-
 
 
 ```

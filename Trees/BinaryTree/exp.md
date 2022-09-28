@@ -1,6 +1,11 @@
 ![diagram of bin tree](https://static.studytonight.com/data-structures/images/binary-search-tree-1.png)
 
 
+## KEY TO UNDERSTAND AND CLEAR CONFUSION
+Is SubTree is reped by each Node
+A BinaryTree is imagined to be just the first one encountered
+e.g [4, 5, 6 ....] (of root 4) , imagine the binary to just be 4,5,6 , and each as Node as a subtree.
+
 #### Binary Tree: Common Terminologies
 - Leaf/External node: Node with no children.
 - Internal node: Node with atleast one children.
