@@ -2,5 +2,5 @@
 
 ### Trees
 | ID | Difficulty | Solution |
-| :-: | :-: | :-:| :-: |
-| 572. Subtree of Another Tree | Easy | [Go Code](Trees/BinaryTree/Easy/isSubtree.md) |
+| :-: | :-: | :-:|
+| [572 Subtree of Another Tree](https://leetcode.com/problems/subtree-of-another-tree/) | Easy | [Go Code](Trees/BinaryTree/Easy/isSubtree.md) |
