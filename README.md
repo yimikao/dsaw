@@ -1,6 +1,6 @@
 # dsaw
 
 ### Trees
-| ID | Difficulty | Code| Exp |
+| ID | Difficulty | Solution |
 | :-: | :-: | :-:| :-: |
-| 1 | Easy | [Python]() | [Python]() |
+| 572. Subtree of Another Tree | Easy | [Go Code](Trees/BinaryTree/Easy/isSubtree.md) |
