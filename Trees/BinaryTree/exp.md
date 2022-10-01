@@ -2,6 +2,7 @@
 
 
 ## KEY TO UNDERSTAND AND CLEAR CONFUSION
+
 Is SubTree is reped by each Node
 A BinaryTree is imagined to be just the first one encountered
 e.g [4, 5, 6 ....] (of root 4) , imagine the binary to just be 4,5,6 , and each as Node as a subtree.
