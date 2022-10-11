@@ -60,3 +60,33 @@ func traverseSubTree(node *TreeNode) (bool ,int) {
 }
 
 ```
+
+```cpp
+/*
+Runtime: 4 ms, faster than 50.00%
+Memory Usage: 10 MB, less than 92.88% 
+*/
+
+
+class Solution {
+public:
+    vector<int> inorderTraversal(TreeNode* root) {
+        vector<int> res;
+        vector<int> l;
+        vector<int> r;
+        
+        if (root == nullptr) {
+            return res;
+        }
+        
+        l = inorderTraversal(root->left);
+        r = inorderTraversal(root->right);
+         
+        res.insert(res.end(), l.begin(), l.end());
+        res.push_back(root->val);
+        res.insert(res.end(), r.begin(), r.end());
+        
+        return res;
+    }
+};
+```
