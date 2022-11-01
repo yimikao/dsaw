@@ -37,7 +37,14 @@ nums is sorted in a strictly increasing order.
 
 ```go
 /*
+Runtime: 0 ms, faster than 100%
+Memory Usage: 3.4 MB, less than 76.56%
+*/
 
+// input "nums" is already a BST
+// but yeah, it might not be height-balanced
+
+//imagine every subtree has [-2,4,9]
 func sortedArrayToBST(nums []int) *TreeNode {
     
     lenArray := len(nums)
@@ -70,9 +77,5 @@ func sortedArrayToBST(nums []int) *TreeNode {
 
 //imagine every subtree has [-2,4,9]
 //convert this array to height-balanced, binary search tree(subtree)
-
-*/
-
-
 
 ```
