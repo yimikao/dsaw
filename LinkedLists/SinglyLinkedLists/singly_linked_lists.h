@@ -36,6 +36,6 @@ class IntSLList {
         int deleteAtTail();
         void deleteNode(int);
         bool isInList(int) const;
-}
+};
 
 #endif

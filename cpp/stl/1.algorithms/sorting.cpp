@@ -20,7 +20,7 @@ int main() {
    v.push_back(9);
    v.push_back(33);
 
-   cout << sort(v.begin(), v.end()) << endl;
+   sort(v.begin(), v.end());
 
    //sort in descending order
    sort(v.begin(), v.end(), greater<int>());
