@@ -5,7 +5,7 @@ Runtime: 7 ms, faster than 81.26% of Go online submissions for Balanced Binary T
 Memory Usage: 5.7 MB, less than 100.00% of Go online submissions for Balanced Binary Tree.
 */
 
-func IsBalanced(root *TreeNode) bool {
+func IsBalanced[T gv](root *TreeNode[T]) bool {
 
 	if root != nil {
 
@@ -30,7 +30,7 @@ func IsBalanced(root *TreeNode) bool {
 
 }
 
-func HeightOfSubTrees(node *TreeNode) int {
+func HeightOfSubTrees[T gv](node *TreeNode[T]) int {
 	if node != nil {
 		heightOfNode := 1
 		heightOfLeftSubTree := HeightOfSubTrees(node.Left)

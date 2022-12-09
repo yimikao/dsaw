@@ -9,7 +9,7 @@ Memory Usage: 3.4 MB, less than 76.56%
 // but yeah, it might not be height-balanced
 
 //imagine every subtree has [-2,4,9]
-func SortedArrayToBST(nums []int) *TreeNode {
+func SortedArrayToBST[T gv](nums []T) *TreeNode[T] {
 
 	lenArray := len(nums)
 	// lp := nums[0]
@@ -27,7 +27,7 @@ func SortedArrayToBST(nums []int) *TreeNode {
 
 	// if our array is not empty i.e a subtree can be created
 	// mid := (rp + lp)/2
-	rootSubtree := new(TreeNode)
+	rootSubtree := new(TreeNode[T])
 	leftSubtree := SortedArrayToBST(nums[:lenArray/2])
 	rightSubtree := SortedArrayToBST(nums[lenArray/2+1:])
 

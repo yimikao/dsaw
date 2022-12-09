@@ -6,7 +6,7 @@ Memory Usage: 4.5 MB, less than 28.62% of Go online submissions for Diameter of 
 */
 
 //note that this means we find
-func DiameterOfbinary(root *TreeNode) int {
+func DiameterOfbinary[T gv](root *TreeNode[T]) int {
 	if root != nil {
 
 		lenLeftSubTree := LengthChildSubTrees(root.Left)
@@ -27,7 +27,7 @@ func DiameterOfbinary(root *TreeNode) int {
 	return 0
 }
 
-func LengthChildSubTrees(root *TreeNode) int {
+func LengthChildSubTrees[T gv](root *TreeNode[T]) int {
 	if root != nil {
 		lenRoot := 1
 		lenLeft := LengthChildSubTrees(root.Left)

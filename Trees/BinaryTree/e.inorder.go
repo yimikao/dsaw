@@ -5,8 +5,8 @@ Runtime: 0 ms, faster than 100.00%
 Memory Usage: 2.1 MB, less than 27.88%
 */
 
-func InorderTraversal(root *TreeNode) []int {
-	var res = []int{}
+func InorderTraversal[T gv](root *TreeNode[T]) []T {
+	var res = []T{}
 
 	if root != nil {
 
@@ -23,9 +23,9 @@ func InorderTraversal(root *TreeNode) []int {
 	return res
 }
 
-func TraverseSubTree(node *TreeNode) (bool, int) {
+func TraverseSubTree[T gv](node *TreeNode[T]) (bool, T) {
 	if node != nil {
 		return true, node.Val
 	}
-	return false, 0
+	return false, T(0)
 }

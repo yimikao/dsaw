@@ -5,7 +5,7 @@ Runtime: 0 ms, faster than 100.00% of Go online submissions for Same Tree.
 Memory Usage: 2 MB, less than 100.00% of Go online submissions for Same Tree.
 */
 
-func IsSameTree(p *TreeNode, q *TreeNode) bool {
+func IsSameTree[T gv](p *TreeNode[T], q *TreeNode[T]) bool {
 	if p == nil && q == nil {
 		return true
 	}
@@ -23,7 +23,7 @@ func IsSameTree(p *TreeNode, q *TreeNode) bool {
 	return false
 }
 
-func ValueOfSubTreeIsEqual(node1 *TreeNode, node2 *TreeNode) bool {
+func ValueOfSubTreeIsEqual[T gv](node1 *TreeNode[T], node2 *TreeNode[T]) bool {
 	if node1.Val != node2.Val {
 		return false
 	}

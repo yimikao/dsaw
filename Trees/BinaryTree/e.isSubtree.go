@@ -5,7 +5,7 @@ Runtime: 41 ms, faster than 5.29% of Go online submissions for Subtree of Anothe
 Memory Usage: 7.2 MB, less than 17.55% of Go online submissions for Subtree of Another Tree.
 */
 
-func IsSubtree(root *TreeNode, subRoot *TreeNode) bool {
+func IsSubtree[T gv](root *TreeNode[T], subRoot *TreeNode[T]) bool {
 
 	if root == nil && subRoot == nil {
 		return true
@@ -31,7 +31,7 @@ func IsSubtree(root *TreeNode, subRoot *TreeNode) bool {
 
 }
 
-func SubTreesAreSame(node1, node2 *TreeNode) bool {
+func SubTreesAreSame[T gv](node1, node2 *TreeNode[T]) bool {
 	if node1 == nil && node2 == nil {
 		return true
 	}

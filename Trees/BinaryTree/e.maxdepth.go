@@ -8,7 +8,7 @@ Memory Usage: 4.1 MB, less than 91.14% of Go online submissions for Maximum Dept
 // Think of it as finding depth of each subtree. Find Depth of what you see, call on children will be/trigger/handle recursion
 
 //total Depth
-func MaxDepth(root *TreeNode) int {
+func MaxDepth[T gv](root *TreeNode[T]) int {
 	if root != nil {
 
 		//get depth of parent subTree
@@ -28,7 +28,7 @@ func MaxDepth(root *TreeNode) int {
 	return 0
 }
 
-func DepthOfSubTree(n *TreeNode) int {
+func DepthOfSubTree[T gv](n *TreeNode[T]) int {
 	if n != nil {
 		return 1
 	}
