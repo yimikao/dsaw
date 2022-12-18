@@ -3,6 +3,10 @@
 
 ## KEY TO UNDERSTAND AND CLEAR CONFUSION
 
+Trees can be brokken down to three main concepts:
+- VIEW: the current tree you can see. Can be ROOT VIEW, LEFT CHILD VIEW, RIGHT CHILD VIEW.
+- NODE: a node in that view
+
 Is SubTree is reped by each Node
 A binary is imagined to be just the first one encountered
 e.g [4, 5, 6 ....] (of root 4) , imagine the binary to just be 4,5,6 , and each as Node as a subtree.
